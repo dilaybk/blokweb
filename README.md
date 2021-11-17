@@ -36,15 +36,15 @@ Surface
 <summary>uitwerken voor kick-off werkgroep</summary>
 
 ### Je opdracht:
-wikipedia.org of dille-kamille.nl (óf omschrijving van je eigen ontwerp)
+wizardingworld.com
 
 #### Screenshot(s) van de eerste pagina (small screen): 
-Voorpagina Wikipedia
-<img src="images/IMG_12E94AA6F87E-1" width="375px" alt="website met informatie over alles">
+Voorpagina wizardingworld.com
+<img src="images/homepagewizard.png" width="375px" alt="website van harry potter franchise">
 
 #### Screenshot(s) van de tweede pagina (small screen):
-Cillian Murphy's pagina 
-<img src="images/IMG_6349.PNG" width="375px" alt="pagina over persoon">
+wizard passport
+<img src="images/wizardingpassport.png" width="375px" alt="wizarding passport">
  
 </details>
 
