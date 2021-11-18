@@ -36,15 +36,15 @@ Surface
 <summary>uitwerken voor kick-off werkgroep</summary>
 
 ### Je opdracht:
-wizardingworld.com
+mai-accents.com
 
 #### Screenshot(s) van de eerste pagina (small screen): 
-Voorpagina wizardingworld.com
-<img src="images/homepagewizard.png" width="375px" alt="website van harry potter franchise">
+Home pagina
+<img src="images/IMG_6410.PNG" width="375px" alt="webshop voorpagina mai-accents">
 
 #### Screenshot(s) van de tweede pagina (small screen):
-wizard passport
-<img src="images/wizardingpassport.png" width="375px" alt="wizarding passport">
+Shop
+<img src="images/IMG_6412.PNG" width="375px" alt="shop pagina">
  
 </details>
 
