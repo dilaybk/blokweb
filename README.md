@@ -56,19 +56,19 @@ Shop
 <summary>uitwerken na afloop 2e werkgroep</summary>
 
 ### de hele pagina: 
-<img src="images/mai-accentshome.png" width="375px" alt="breakdown van de hele pagina">
+<img src="images/mai-accents-breakdown.png" width="375px" alt="breakdown van de hele pagina">
 
 ### dynamisch deel (bijv menu): 
 <img src="images/dynamisch.png" width="375px" alt="breakdown van een dynamisch deel: tekst dat horizontaal scrollt">
 
 ### wellicht nog een dynamisch deel (bijv filter):
-<img src="images/menu.png" width="375px" alt="breakdown van nog een dynamisch deel: menu">
+<img src="images/menu-breakdown.png" width="375px" alt="breakdown van nog een dynamisch deel: menu">
 
 ### dynamisch deel 3, als ik de uitdaging aan wil gaan:
 <img src="images/dynamisch2" width="375px" alt="breakdown van nog een dynamisch deel: images 'ease in'">
 
 ### tweede pagina:
-<img src="images/shoppagina.png" width="375px" alt="tweede pagina: shopping">
+<img src="images/shoppagina-breakdown.png" width="375px" alt="tweede pagina: shopping">
 </details>
 
 
