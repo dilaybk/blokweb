@@ -65,10 +65,10 @@ Shop
 <img src="images/menu-breakdown.png" width="375px" alt="breakdown van nog een dynamisch deel: menu">
 
 ### dynamisch deel 3, als ik de uitdaging aan wil gaan:
-<img src="images/dynamisch2" width="375px" alt="breakdown van nog een dynamisch deel: images 'ease in'">
+<img src="images/dynamisch2.png" width="375px" alt="breakdown van nog een dynamisch deel: images 'ease in'">
 
 ### tweede pagina:
-<img src="images/shoppagina-breakdown.png" width="375px" alt="tweede pagina: shopping">
+<img src="images/shoppagina-breakdown2.png" width="375px" alt="tweede pagina: shopping">
 </details>
 
 
