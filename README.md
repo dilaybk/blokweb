@@ -58,14 +58,17 @@ Shop
 ### de hele pagina: 
 <img src="images/correct-mai-accents-breakdown.png" width="375px" alt="breakdown van de hele pagina">
 
-### dynamisch deel (bijv menu): 
+### dynamisch: 
 <img src="images/dynamisch.png" width="375px" alt="breakdown van een dynamisch deel: tekst dat horizontaal scrollt">
+tekst dat horizontaal scrollt
 
-### wellicht nog een dynamisch deel (bijv filter):
+### wellicht nog een dynamisch deel:
 <img src="images/menu-breakdown.png" width="375px" alt="breakdown van nog een dynamisch deel: menu">
+menu
 
-### dynamisch deel 3, als ik de uitdaging aan wil gaan:
+### dynamisch deel 3, als ik er tijd voor heb:
 <img src="images/dynamisch2.png" width="375px" alt="breakdown van nog een dynamisch deel: images 'ease in'">
+images 'ease-in'
 
 ### tweede pagina:
 <img src="images/shoppagina-breakdown2.png" width="375px" alt="tweede pagina: shopping">
