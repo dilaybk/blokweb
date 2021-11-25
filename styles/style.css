@@ -1,5 +1,149 @@
 /* CSS Document */
 *, *::after, *::before {
-  box-sizing:border-box;  
+  box-sizing:border-box;
+  padding: 0;
+  margin:0;
+  outline: 0;
+  border: 0;
+
+  /*kan dit hier staan op deze manier?*/
+  font-family: var(--main-font), var(--font-fallback);
+}
+
+:root {
+  --background-color: #CCCEFD;
+  --main-color: white;
+  --main-font: Karla;
+  --font-fallback: sans-serif;
+  --font-weight: 300;
+}
+
+
+body {
+  background-color: var(--background-color);
+  text-align: center;
+}
+
+/* Wat er in de header staat is voor die gehele heade, h1 & img zijn specifiek omdat die styling daarin moet passen */
+/* Header with announcement & logo */
+header {
+  font-weight: 200; /*waarom werkt dit niet*/
+  font-size: 0.35em;
+  letter-spacing: 2px;
+  line-height: 4em;
+
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+header h1 {
+  background-color: #AEBC77;
+  color: var(--main-color);
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+  padding: 0.5em;
+
+}
+
+header img {
+  margin-top: 10em;
+  width: 20em;
+}
+
+/*Section voor background, waarin header, intro section, nav & scroll ding in staat*/
+.landing {
+  background-image: url('/images/flowers.jpeg');
+  background-repeat: no-repeat;
+  background-size: 122%;
+  height: 100vh; 
+}
+
+/* .landing form h2 {
+
+
+} */
+
+/* Intro Section */
+.intro h1 {
+  font-weight: var(--font-weight);
+  font-size: 1.6em;
+  color: var(--main-color);
+  margin-top: 7em;
+
+}
+
+/* Button 'Shop now' */
+.intro button {
+  text-decoration: none;
+  font-weight: var(--font-weight);
+
+  background-color: var(--main-color);
+
+  padding: 0.75em;
+  padding-left: 1.75em;
+  padding-right: 1.75em;
+  border-radius: 2em;
+  margin-top: 2em;
+}
+
+ button:nth-of-type(2) {
+  background-color: #AEBC77
+}
+
+/* Menu unordered list */
+/* .intro ul > a {
+
+  list-style: none;
+} */
+
+/* Background image with flowers */
+.intro img {
+  width: 20em;
+}
+
+
+
+/* Start next section: Collection */
+.collection {
+  background-color: #FFB9B8;
+  color: var(--main-color);
+
+  padding-top: 4em;
+}
+
+.collection h1 {
+  font-weight: var(--font-weight);
+}
+
+.collection ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  margin-top: 0px;
+  margin-right: -20px;
+  margin-bottom: 0;
+  margin-left: -20px;
+  list-style: none;
+}
+
+/*help*/
+.collection img {
+  position: relative;
+  max-width: 10em;
+  max-height: 10em;
+  border-radius: 20%;
+}
+
+.collection a {
+  position: absolute;
+  text-align: center;
+  text-decoration: none;
+
 }
 

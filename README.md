@@ -86,7 +86,10 @@ images 'ease-in'
 
 ### Stand van zaken
 hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
-
+<img src="images/lastig1.jpg">
+<img src="images/lastigimg1.jpg">
+<img src="images/form-nav.jpg">
+<img src="images/vraag.jpg">
 
 ### Agenda voor meeting
 samen met je groepje opstellen

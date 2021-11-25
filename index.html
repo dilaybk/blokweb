@@ -10,68 +10,83 @@
 	
 		<link href="styles/style.css" rel="stylesheet">
 		<link rel="icon" type="image/svg+xml" href="images/favicon.svg"> <!--CHANGE-->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;500;700;800&family=Sacramento&display=swap" rel="stylesheet">
 	</head>
 
 
 	<body>
 
-		<!--Header with update bar and maí logo-->
-		<header>
-			<h1> ⭑ PICKLE IS BACK! ORDER YOUR LONG BOI NOW ⭑ </h1>
-			<img src="images/whitelogo.png" alt="logo maí">
-		</header>
+		<!--Landing "section"-->
+		<section class="landing">
+
+			<header>
+				<h1> ★ PICKLE IS BACK! ORDER YOUR LONG BOI NOW ★ </h1>
+				<img src="images/whitelogo.png" alt="logo maí">
+			</header>
+
+				<!--Intro section-->
+				<section class="intro">
+					
+					<h1>
+						Handmade creations 
+						<br> with character. </br>
+					</h1>
+
+					<button>
+						Shop Now
+					</button>
+
+				</section>
+
+				<!--Navigation als 'form' bc humpty opdracht-->
+				<form>
+
+					<h2 tabindex="0" role="button">Menu</h2>
+
+					<fieldset>
+
+						<div>
+							<input type="button" name="Home" id="home-link" checked>
+							<label for="home-link">Home</label>
+
+							<input type="button" name="Shop" id="shop-link" checked>
+      						<label for="shop-link">Shop</label>
+
+							<input type="button" name="Creations" id="creations-link" checked>
+      						<label for="creations-link">Maí Creations</label>
+
+							<input type="button" name="Contact" id="contact-link" checked>
+      						<label for="contact-link">Contact</label>
+
+							<input type="button" name="Login" id="login-link" checked>
+      						<label for="login-link">Log in</label>
+
+							<input type="button" name="Close" id="close-link" checked>
+      						<label for="close-link">X</label>
+								
+
+						</div>
+
+					</fieldset>
+
+				</form>
 
 
+					<!--Little scroll thingy at the end of this section-->
+				<section>
+					Shaping clay into anything beautiful that serves a purpose ☺
+				</section>
+
+		</section>
+
+
+		<!--Begin van main-->
 		<main>
 
-			<!--First intro section-->
-			<section>
-				<h1>
-					Handmade creations with character.
-				</h1>
-
-				<a href="">
-					Shop Now
-				</a>
-
-
-				<!--Navigation-->
-				<nav>
-					<ul> <a href=""> Menu </a></ul>
-					<ul>
-						<li><a href="">
-							Home
-						</a></li>
-						<li><a href="">
-							Shop
-						</a></li>
-						<li><a href="">
-							Maí Creations
-						</a></li>
-						<li><a href="">
-							Contact
-						</a></li>
-						<li><a href="">
-							Log in
-						</a></li>
-						<li><a href="">
-							x
-						</a></li>
-					</ul>
-				</nav>
-
-
-				<!--Little scroll thingy at the end of this section-->
-				<aside>
-					scroll thing
-				</aside>
-
-			</section>
-
-
-
 			<!--6 Collection links with images-->
-			<section>
+			<section class="collection">
 				<h1>
 					Our Collections
 				</h1>
@@ -137,7 +152,7 @@
 
 
 			<!--Newsletter form-->
-			<section>
+			<section class="newsletter">
 				<h1>
 					Sign up to our new newsletters!
 				</h1>
@@ -155,7 +170,7 @@
 
 
 			<!--Link to process of maí-->
-			<section>
+			<section class="process">
 				<img src="images/beeboi.png" alt="picture of a bee plushie">
 				<img src="images/pinkcup.jpeg" alt="picture of a cup with a face">
 				<h1>
@@ -174,7 +189,7 @@
 
 
 			<!--Quote Marzia-->
-			<section>
+			<section class="quote">
 				<img src="images/marzia.png" alt="picture of the founder, Marzia">
 				<blockquote>
 					“I was never able to pick an individual path to focus on, 
@@ -191,14 +206,14 @@
 
 
 			<!--Random ceramic picture that fills the page-->
-			<section>
+			<section class="greenboi">
 				<img src="images/greenhero.jpeg" alt="picture with a ceramic cup and green background">
 			</section>
 
 
 
 			<!--Section with featured pics of customers-->
-			<section>
+			<section class="featured">
 				<!--cloud1-->
 				<img src="" alt="">
 
