@@ -12,6 +12,7 @@
 
 :root {
   --background-color: #CCCEFD;
+  --secondary-bg-color: pink;
   --main-color: white;
   --main-font: Karla;
   --font-fallback: sans-serif;
@@ -24,17 +25,24 @@ body {
   text-align: center;
 }
 
+img {
+  width: 10em;
+}
+
+h1 {
+  font-weight: var(--font-weight);
+  font-size: 2em;
+}
+
+
 /* Wat er in de header staat is voor die gehele heade, h1 & img zijn specifiek omdat die styling daarin moet passen */
 /* Header with announcement & logo */
 header {
-  font-weight: 200; /*waarom werkt dit niet*/
+  font-weight: 300;
   font-size: 0.35em;
   letter-spacing: 2px;
   line-height: 4em;
 
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
 }
 
 header h1 {
@@ -51,34 +59,29 @@ header h1 {
 }
 
 header img {
-  margin-top: 10em;
   width: 20em;
+  position: absolute;
+  left: calc(50% - 10em);
 }
 
-/*Section voor background, waarin header, intro section, nav & scroll ding in staat*/
-.landing {
-  background-image: url('/images/flowers.jpeg');
-  background-repeat: no-repeat;
-  background-size: 122%;
-  height: 100vh; 
-}
-
-/* .landing form h2 {
-
+/* article {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
 
 } */
 
-/* Intro Section */
-.intro h1 {
+article h2 {
   font-weight: var(--font-weight);
   font-size: 1.6em;
   color: var(--main-color);
-  margin-top: 7em;
 
 }
 
 /* Button 'Shop now' */
-.intro button {
+article button {
   text-decoration: none;
   font-weight: var(--font-weight);
 
@@ -91,59 +94,213 @@ header img {
   margin-top: 2em;
 }
 
- button:nth-of-type(2) {
-  background-color: #AEBC77
-}
-
-/* Menu unordered list */
-/* .intro ul > a {
-
-  list-style: none;
+/* nav {
+  display: flex;
+  align-items: flex-end;
 } */
 
-/* Background image with flowers */
-.intro img {
-  width: 20em;
+nav button {
+  padding: 1em;
+  padding-left: 2em;
+  padding-right: 2em;
+  border-radius: 2em;
 }
 
-
-
-/* Start next section: Collection */
-.collection {
-  background-color: #FFB9B8;
+ul {
   color: var(--main-color);
-
-  padding-top: 4em;
 }
 
-.collection h1 {
-  font-weight: var(--font-weight);
+li {
+  list-style-type: none;
 }
 
-.collection ul {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-
-  margin-top: 0px;
-  margin-right: -20px;
-  margin-bottom: 0;
-  margin-left: -20px;
-  list-style: none;
+aside {
+  position: absolute;
+  bottom: 0;
+  background-color: lightyellow;
 }
 
-/*help*/
-.collection img {
+/*Section voor background, waarin header, article, nav & scroll ding in staat*/
+.landing {
+  background-image: url('/images/flowers.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh; 
+
   position: relative;
-  max-width: 10em;
-  max-height: 10em;
-  border-radius: 20%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/*COLLECTION*/
+/*position relative/absolute zorgt ervoor dat hij bij de .landing gaat*/
+.collection {
+  background-color: var(--secondary-bg-color);
+  color: var(--main-color);
+}
+
+.collection > h1 {
+  padding: 2em;
 }
 
 .collection a {
-  position: absolute;
-  text-align: center;
-  text-decoration: none;
+  color: var(--main-color);
+}
+
+
+/*NEWSLETTER*/
+.newsletter {
+  color: var(--main-color);
+  background-color: rgb(255, 191, 166);
+  padding: 2em;
+}
+
+.newsletter h1 {
+  padding: 2em 2em 0.5em 2em;
+}
+
+.newsletter p {
+  margin-bottom: 1em;
+}
+
+input[type=email] {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--main-color);
+  margin-bottom: 3em;
 
 }
 
+/*selecteren placeholder text om kleur te geven*/
+::placeholder {
+  color: var(--main-color);
+}
+
+
+.process {
+  color: var(--main-color);
+  margin: 4em;
+}
+
+.process h1 {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.process p {
+  margin-bottom: 2em;
+}
+
+.process a {
+  text-decoration: none;
+  font-weight: var(--font-weight);
+
+  background-color: lightyellow;
+  color: black;
+
+  padding: 0.75em;
+  padding-left: 1.75em;
+  padding-right: 1.75em;
+  border-radius: 2em;
+  margin-top: 20em;
+
+}
+
+
+/*QUOTE MARZIA*/
+.quote {
+  background-color: var(--secondary-bg-color);
+  color: var(--main-color);
+  
+  padding-top: 3em;
+  padding-bottom: 3em;
+}
+
+.quote img {
+  width: 20em;
+}
+
+.quote blockquote {
+  font-size: 2em;
+  font-weight: var(--font-weight);
+
+  margin-bottom: 0.5em;
+  margin-left: 2em;
+  margin-right: 2em;
+}
+
+.quote p {
+  margin-bottom: 2em;
+}
+
+.quote a {
+  text-decoration: none;
+  background-color: var(--main-color);
+  color:var(--secondary-bg-color);
+
+  padding: 0.75em;
+  padding-left: 1.75em;
+  padding-right: 1.75em;
+  border-radius: 2em;
+  margin-top: 20em;
+}
+
+
+/*RANDOM GREEN BOI*/
+.greenboi {
+  margin: 0;
+}
+
+.greenboi img {
+  width: 100%;
+}
+
+
+
+
+/*FEATURED IMG*/
+.featured  {
+  color: var(--main-color);
+}
+
+
+.featured p {
+  margin-bottom: 2em;
+}
+
+
+.featured article {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center; /*makes images not stretch*/
+  gap: 2em;
+  margin-left: 2em;
+  margin-right: 2em;
+  margin-bottom: 2em;
+  overflow: scroll;
+}
+
+.featured img {
+  border: 0.5em solid white;
+  border-bottom: 3em solid white;
+}
+
+footer {
+  color: var(--main-color);
+
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  gap: 2em;
+
+  margin-bottom: 5em;
+}
+
+footer a {
+  text-decoration: none;
+  font-weight: var(--font-weight);
+  font-size: 0.75em;
+  color: var(--main-color);
+}

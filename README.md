@@ -104,10 +104,11 @@ samen met je groepje opstellen
 ### Verslag van meeting
 hier na afloop snel de uitkomsten van de meeting vastleggen
 
-- punt 1
-- punt 2
-- nog een punt
-- ...
+- voor img/bg size: cover gebruiken 
+- meer met flexbox werken
+- menu op een andere manier - niet zoals de humpty opdracht
+- h1/h2 checken
+- nav weer toevoegen ipv form 
 
 </details>
 
@@ -122,6 +123,10 @@ hier na afloop snel de uitkomsten van de meeting vastleggen
 
 ### Stand van zaken
 hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+
+De basis van de website is goed. Ben bijna klaar met mijn eerste html pagina. Ik ben nog niet toegekomen aan de tweede html pagina, maar die is makkelijker dan deze dus misschien heb ik dan minder stress.
+
+Nu heb ik nog problemen met de navigatie, de 'collection' sectie, tekst schrijven bij de polaroids beneden. figcaption schrijven?
 
 
 ### Agenda voor meeting
