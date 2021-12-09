@@ -156,7 +156,7 @@ aside {
 
 /*Section voor background, waarin header, article, nav & scroll ding in staat*/
 .landing {
-  background-image: url('/images/flowers.jpeg');
+  background-image: url('/images/flowers.jpg'); /*DEZE IS NIET TE ZIEN OP ANDERE PCS*/
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh; 
