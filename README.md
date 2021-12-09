@@ -142,10 +142,10 @@ samen met je groepje opstellen
 ### Verslag van meeting
 hier na afloop snel de uitkomsten van de meeting vastleggen
 
-- punt 1
-- punt 2
-- nog een punt
-- ...
+- max width bij img > 100%
+- h1 moeten h2s zijn: h1 is een titel
+- vragen aan studentenassistenten vragen
+- wel goed op weg maar moet specifieke dingen vragen
 
 </details>
 
@@ -160,6 +160,16 @@ hier na afloop snel de uitkomsten van de meeting vastleggen
 
 ### Bevindingen
 Lijst met je bevindingen die in de test naar voren kwamen:
+- Hij leest niet alle headers voor
+- tabben gaat goed
+- wit op geel werkt niet
+- let op kleur bij tekst. Er moet bij collection een zwarte overlay misschien op de fotos
+- op de website veel lichte kleuren dus moet meer contrast erin
+- grootte gaat goed wanneer je het groot
+- je moet veel lezen dus wanneer je concentratie problemen hebt ga je niet de hele pagina lezen
+- tekst op collection misschien iets groter om meteen te kunnen zien waar je heen moet
+- shop now is wel handig 
+- op shoppagina meteen wel duidelijk wat er moet gebeuren en je kunt meteen zien wat het product is
 
 #### Titel eerste bevinding
 Hier korte omschrijving (met indien nodig een afbeelding)

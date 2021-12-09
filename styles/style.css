@@ -5,28 +5,31 @@
   margin:0;
   outline: 0;
   border: 0;
-
-  /*kan dit hier staan op deze manier?*/
-  font-family: var(--main-font), var(--font-fallback);
 }
 
 :root {
   --background-color: #CCCEFD;
   --secondary-bg-color: pink;
+  --tertiary-bg-color: #F6D47F;
   --main-color: white;
+  --active-color: rgb(112, 6, 55);
   --main-font: Karla;
-  --font-fallback: sans-serif;
+  --font-fallback: Helvetica;
+  --font-fallback2: Arial;
+  --font-fallback3: sans-serif;
   --font-weight: 300;
 }
 
+/*GENERAL STYLES*/
 
 body {
   background-color: var(--background-color);
   text-align: center;
+  font-family: var(--main-font), var(--font-fallback), var(--font-fallback2), var(--font-fallback3);
 }
 
 img {
-  width: 10em;
+  width: 100%;
 }
 
 h1 {
@@ -61,6 +64,7 @@ header h1 {
 header img {
   width: 20em;
   position: absolute;
+  top: 10em;
   left: calc(50% - 10em);
 }
 
@@ -77,48 +81,78 @@ article h2 {
   font-weight: var(--font-weight);
   font-size: 1.6em;
   color: var(--main-color);
-
+  margin-bottom: 1em;
 }
 
 /* Button 'Shop now' */
-article button {
+article a {
   text-decoration: none;
   font-weight: var(--font-weight);
 
   background-color: var(--main-color);
+  color: black;
 
   padding: 0.75em;
   padding-left: 1.75em;
   padding-right: 1.75em;
   border-radius: 2em;
-  margin-top: 2em;
 }
 
-/* nav {
+nav {
+  position: fixed;
+  bottom: 3em;
+  z-index: 90;
   display: flex;
-  align-items: flex-end;
-} */
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--tertiary-bg-color);
+  border-radius: 10%;
+}
 
 nav button {
-  padding: 1em;
-  padding-left: 2em;
-  padding-right: 2em;
-  border-radius: 2em;
+  font-size: 1.2em;
+  letter-spacing: 0.7em;
+  font-family: var(--main-font), var(--font-fallback) var(--font-fallback2), var(--font-fallback3);
+  color: var(--main-color);
+  padding: 0.7em;
+  padding-left: 4em;
+  padding-right: 4em;
+  background-color: var(--tertiary-bg-color);
+}
+
+nav ul {
+  overflow: hidden;
+  height: 0;
 }
 
 ul {
   color: var(--main-color);
+
+}
+
+ul.isopen {
+  height: auto;
 }
 
 li {
   list-style-type: none;
 }
 
+a {
+  text-decoration: none;
+}
+
 aside {
   position: absolute;
   bottom: 0;
-  background-color: lightyellow;
+  right: 0;
+  left: 0;
+  color: var(--main-color);
+  background-color: var(--tertiary-bg-color);
 }
+
+
+/*CLASSES*/
 
 /*Section voor background, waarin header, article, nav & scroll ding in staat*/
 .landing {
@@ -130,7 +164,26 @@ aside {
   position: relative;
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
+}
+
+.landing article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 50%;
+}
+
+/*css shoppagina*/
+.landing header h2 {
+  color: var(--main-color);
+
+  font-size: 6em;
+  font-family: var(--main-font), var(--font-fallback), var(--font-fallback2), var(--font-fallback3);
+  font-weight: var(--font-weight);
+
+  margin-top: -7em;
 }
 
 /*COLLECTION*/
@@ -138,14 +191,46 @@ aside {
 .collection {
   background-color: var(--secondary-bg-color);
   color: var(--main-color);
+  padding-bottom: 3em;
 }
 
-.collection > h1 {
+.collection > h2 {
   padding: 2em;
 }
 
+
+.collection ul {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  gap: 1em;
+
+}
+
+.collection ul li {
+  position: relative;
+}
+
+.collection ul li a:hover {
+  color: black;
+}
+
+.collection img {
+  position: relative;
+  width: 10em;
+}
+
+/*HOW DO I GET THE TEXT IN THE MIDDLE*/
+
 .collection a {
   color: var(--main-color);
+  position: absolute;
+  /* margin-left: -10em; */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 10;
 }
 
 
@@ -156,7 +241,7 @@ aside {
   padding: 2em;
 }
 
-.newsletter h1 {
+.newsletter h2 {
   padding: 2em 2em 0.5em 2em;
 }
 
@@ -177,13 +262,27 @@ input[type=email] {
   color: var(--main-color);
 }
 
-
 .process {
   color: var(--main-color);
   margin: 4em;
+
+  position: relative;
 }
 
-.process h1 {
+.process img:first-of-type {
+  position: absolute;
+  width: 60%;
+  top: 3em;
+  left: 0;
+}
+
+.process img:nth-of-type(2) {
+  margin-left: 7em;
+  margin-bottom: 3em;
+  width: 60%;
+}
+
+.process h2 {
   margin-top: 0.5em;
   margin-bottom: 0.5em;
 }
@@ -196,8 +295,8 @@ input[type=email] {
   text-decoration: none;
   font-weight: var(--font-weight);
 
-  background-color: lightyellow;
-  color: black;
+  background-color: var(--tertiary-bg-color); /*same as the bgcolor*/
+  color: white;
 
   padding: 0.75em;
   padding-left: 1.75em;
@@ -247,7 +346,7 @@ input[type=email] {
 }
 
 
-/*RANDOM GREEN BOI*/
+/*RANDOM GREEN BOI PIC*/
 .greenboi {
   margin: 0;
 }
@@ -255,7 +354,6 @@ input[type=email] {
 .greenboi img {
   width: 100%;
 }
-
 
 
 
@@ -283,9 +381,20 @@ input[type=email] {
 }
 
 .featured img {
-  border: 0.5em solid white;
-  border-bottom: 3em solid white;
+  width: 15em;
+  border: 0.2em solid white;
+  border-bottom: 5em solid white;
 }
+
+.featured .clouds {
+  border: none;
+  width: 10%;
+}
+
+
+
+
+/*FOOTER*/
 
 footer {
   color: var(--main-color);
@@ -294,7 +403,6 @@ footer {
   justify-content: center;
   flex-flow: row wrap;
   gap: 2em;
-
   margin-bottom: 5em;
 }
 
@@ -303,4 +411,19 @@ footer a {
   font-weight: var(--font-weight);
   font-size: 0.75em;
   color: var(--main-color);
+}
+
+
+/*STYLES FOR STATES*/
+article > a:active {
+  background-color: var(--active-color);
+  color: var(--main-color);
+}
+
+a:focus {
+  border: solid olive;
+}
+
+input:focus {
+  opacity: 50%;
 }
