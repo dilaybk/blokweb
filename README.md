@@ -222,10 +222,9 @@ samen met je groepje opstellen
 ### Verslag van meeting
 hier na afloop snel de uitkomsten van de meeting vastleggen
 
-- punt 1
-- punt 2
-- nog een punt
-- ...
+- img werkte niet omdat hij in de folder moet zoeken. ..img voor fowers en .img voor clouds
+- grotere margin bij de footer
+- ...  
 
 </details>
 
