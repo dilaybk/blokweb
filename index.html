@@ -16,14 +16,15 @@
 	</head>
 
 
-	<body>
+	<!-- ID toegevoegd aan body voor betere styling -->
+	<body id="index">
 
 		<!--Landing "section"-->
 		<section class="landing">
 
 			<header>
 				<h1> ★ PICKLE IS BACK! ORDER YOUR LONG BOI NOW ★ </h1>
-				<img src="../images/whitelogo.png" alt="logo maí">
+				<img src="./images/whitelogo.png" alt="logo maí">
 			</header>
 
 
@@ -45,21 +46,19 @@
 			<!--Navigation-->
 			<nav>
 
-
 				<!--Unordered list met list items voor verschillende links naar andere pagina's-->
 				<ul>
 
-					<li><a href="">Home</a></li>
+					<li><a href="/index.html">Home</a></li>
 
-					<li><a href="">Shop</a></li>
+					<li><a href="pages/shop.html">Shop</a></li>
 
 					<li><a href="">Creations</a></li>
 
 					<li><a href="">Contact</a></li>
 
 					<li><a href="">Login</a></li>
-
-					<li><a href="">Close</a></li>			
+		
 
 				</ul>
 
@@ -70,7 +69,9 @@
 
 			<!--Little scroll thingy at the end of this section-->
 			<aside>
-				Shaping clay into anything beautiful that serves a purpose ☺
+				<p>Shaping clay into anything beautiful that serves a purpose ☺</p>
+				<p>Shaping clay into anything beautiful that serves a purpose ☺</p>
+				<p>Shaping clay into anything beautiful that serves a purpose ☺</p>
 			</aside>
 
 		</section>
@@ -133,8 +134,8 @@
 					We'll keep you up to date with new and returning products
 				</p>
 
-				<form action="...">
-					<input type="email" value placeholder="Enter your email">
+				<form action="./pages/submitted.html">
+					<input type="email" placeholder="Enter your email">
 					<input type="image" src="images/whitemail.svg" alt="Submit" width="25">
 				</form>
 			</section>
@@ -194,29 +195,61 @@
 
 			<!--Section with featured pics of customers-->
 			<section class="featured">
-				<!--cloud1-->
-				<img class="clouds" src="./images/cloud.png" alt="cloud">
 
-				<h2>
-					Welcome Home
-				</h2>
+				<!--section met cloud img en h2-->
+				<section class="featuredheading">
 
-				<!--cloud2-->
-				<img class="clouds" src="./images/cloud.png" alt="cloud">
+					<!--cloud1-->
+					<img src="./images/cloud.png" alt="cloud">
 
+					<h2>
+						Welcome Home
+					</h2>
 
+					<!--cloud2-->
+					<img src="./images/cloud.png" alt="cloud">
+
+				</section>
+				
 				<p>
 					Our creations at home with you. 
 					Don't forget to tag @mai_accents for the chance to be featured!
 				</p>
 
+
 				<!--polaroid pics-->
 				<article>
+
+					<figure>
 					<img src="images/featured1.jpeg" alt="feautured image: pot that itsastrawberryblondie bought">
+					<!-- <p>katherine_62442</p> -->
+					<figcaption><span>katherine_62442:</span> My Tazza hiding in my jungle</figcaption>
+					</figure>
+
+					<figure>
 					<img src="images/featured2.jpeg" alt="featured image 2">
+					<!-- <p>bridgetdagenais_art</p> -->
+					<figcaption><span>bridgetdagenais_art:</span> Nacho is doing a good job measuring how much bigger my newest Maì addition for my desk is compared to the others (using his head as a size reference of course)! ✨🐈</figcaption>
+					</figure>
+
+					<figure>
 					<img src="images/featured3.jpeg" alt="featured image 3">
+					<!-- <p>scotchinateacup</p> -->
+					<figcaption><span>scotchinateacup:</span> ready for hygge season ☺️ • so happy to have found this perfect little lavender tree today to go with my newest ceramic masterpiece by @mai_accents</figcaption>
+					</figure>
+
+					<figure>
 					<img src="images/featured4.jpeg" alt="featured image 4">
+					<!-- <p>daisythegoldiee</p> -->
+					<figcaption><span>daisythegoldiee:</span> Meet my floofy pink friend, Pickle! 💖</figcaption>
+					</figure>
+
+					<figure>
 					<img src="images/featured5.jpeg" alt="featured image 5">
+					<!-- <p>maltesetigress</p> -->
+					<figcaption><span>maltesetigress:</span> My boy meeting his new brother 🥰</figcaption>
+					</figure>
+
 				</article>
 
 			</section>
@@ -240,12 +273,9 @@
 				© 2021 Maì. 
 			</p>
 
-			<a href="">
-				Powered by Shopify
-			</a>
-
 		</footer>
 
+		<!--Javascript link-->
 		<script src="./scripts/script.js"></script>
 
 	</body>

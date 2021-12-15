@@ -1,16 +1,18 @@
 /* CSS Document */
 *, *::after, *::before {
-  box-sizing:border-box;
+  box-sizing: border-box;
   padding: 0;
   margin:0;
   outline: 0;
   border: 0;
 }
 
+/*Document staat op volgorde van html*/
+
 :root {
-  --background-color: #CCCEFD;
-  --secondary-bg-color: pink;
-  --tertiary-bg-color: #F6D47F;
+  --background-color: #888bda;
+  --secondary-bg-color: rgb(209, 124, 139);
+  --tertiary-bg-color: #F5D47F;
   --main-color: white;
   --active-color: rgb(112, 6, 55);
   --main-font: Karla;
@@ -26,19 +28,34 @@ body {
   background-color: var(--background-color);
   text-align: center;
   font-family: var(--main-font), var(--font-fallback), var(--font-fallback2), var(--font-fallback3);
+  color: var(--main-color);
 }
+
 
 img {
   width: 100%;
 }
+
 
 h1 {
   font-weight: var(--font-weight);
   font-size: 2em;
 }
 
+p {
+  margin: auto;
+}
 
-/* Wat er in de header staat is voor die gehele heade, h1 & img zijn specifiek omdat die styling daarin moet passen */
+a {
+  text-decoration: none;
+  cursor: pointer;
+
+  /*animatie*/
+  transition: all 0.5s ease-in-out;
+}
+
+
+/* Wat er in de header staat is voor die gehele header, h1 & img zijn specifiek omdat die styling daarin moet passen */
 /* Header with announcement & logo */
 header {
   font-weight: 300;
@@ -48,9 +65,9 @@ header {
 
 }
 
+/*announcement*/
 header h1 {
-  background-color: #AEBC77;
-  color: var(--main-color);
+  background-color: #718d01;
 
   position: absolute;
   top: 0;
@@ -61,6 +78,7 @@ header h1 {
 
 }
 
+/*mai logo pic*/
 header img {
   width: 20em;
   position: absolute;
@@ -68,19 +86,10 @@ header img {
   left: calc(50% - 10em);
 }
 
-/* article {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: center;
-  align-content: center;
-
-} */
-
+/*H2: Handmade creations with character*/
 article h2 {
   font-weight: var(--font-weight);
   font-size: 1.6em;
-  color: var(--main-color);
   margin-bottom: 1em;
 }
 
@@ -98,6 +107,7 @@ article a {
   border-radius: 2em;
 }
 
+/*Navigation*/
 nav {
   position: fixed;
   bottom: 3em;
@@ -105,67 +115,124 @@ nav {
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-color: var(--tertiary-bg-color);
-  border-radius: 10%;
+  background-color: rgb(221, 147, 49); 
+  overflow: hidden; /*voor ronde border wanneer open*/
 }
 
+/*button voor navigatie*/
 nav button {
   font-size: 1.2em;
+  text-transform: uppercase;
   letter-spacing: 0.7em;
   font-family: var(--main-font), var(--font-fallback) var(--font-fallback2), var(--font-fallback3);
-  color: var(--main-color);
   padding: 0.7em;
   padding-left: 4em;
   padding-right: 4em;
+  color: #B9613E;
   background-color: var(--tertiary-bg-color);
+  cursor: pointer;
 }
 
+/*links in nav*/
 nav ul {
   overflow: hidden;
   height: 0;
 }
 
-ul {
-  color: var(--main-color);
-
-}
-
+/*voor js*/
 ul.isopen {
   height: auto;
 }
 
+/*list styling*/
 li {
   list-style-type: none;
+  margin: 1em;
 }
 
-a {
-  text-decoration: none;
+li > a {
+  color: var(--main-color);
 }
 
+
+/* Aside voor scroll ding */
 aside {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  gap: 1.5em;
   position: absolute;
   bottom: 0;
   right: 0;
   left: 0;
-  color: var(--main-color);
+  padding: 0.3em;
   background-color: var(--tertiary-bg-color);
+  color: #6d222f;
+}
+
+aside p {
+  white-space: nowrap; /*blijft naast elkaar in een lijn*/
+  animation-name: slider;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes slider {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/*FOOTER*/
+
+footer {
+  color: var(--main-color);
+
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  gap: 2em;
+  margin-top: 10em;
+  margin-bottom: 20em;
+}
+
+footer a {
+  text-decoration: none;
+  font-weight: var(--font-weight);
+  font-size: 0.75em;
+  color: var(--main-color);
 }
 
 
 /*CLASSES*/
 
-/*Section voor background, waarin header, article, nav & scroll ding in staat*/
-.landing {
-  background-image: url("/images/flowers.jpg"); /*DEZE IS NIET TE ZIEN OP ANDERE PCS EN OOK DE IMG CLOUDS IN HTML*/
+/*Section voor background, waarin header, article, nav & aside in staat*/
+
+#index .landing {
+  background-image: url("../images/flowers.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh; 
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.landing {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+
+  opacity: 0;
+  transition: opacity 250ms ease-in;
 }
 
 .landing article {
@@ -175,10 +242,8 @@ aside {
   height: 50%;
 }
 
-/*css shoppagina*/
+/*css shoppagina: header h2 'Made by Marzia'*/
 .landing header h2 {
-  color: var(--main-color);
-
   font-size: 6em;
   font-family: var(--main-font), var(--font-fallback), var(--font-fallback2), var(--font-fallback3);
   font-weight: var(--font-weight);
@@ -186,58 +251,81 @@ aside {
   margin-top: -7em;
 }
 
+
+
 /*COLLECTION*/
-/*position relative/absolute zorgt ervoor dat hij bij de .landing gaat*/
+
+/*Section waar verschillende links naar andere pagina's staan*/
 .collection {
   background-color: var(--secondary-bg-color);
-  color: var(--main-color);
   padding-bottom: 3em;
 }
 
+/*titel: collection*/
 .collection > h2 {
   padding: 2em;
 }
 
-
+/*links met afbeeldingen*/
 .collection ul {
   display: flex;
   justify-content: center;
   align-content: center;
   flex-wrap: wrap;
   gap: 1em;
-
 }
 
+/*zorgt ervoor dat de tekst in het midden van de afbeeldingen blijft*/
 .collection ul li {
   position: relative;
 }
 
-.collection ul li a:hover {
-  color: black;
+
+.collection ul li::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 98%;
+  top: 0;
+  left: 0;
+  border-radius: 2em;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transition: all 1s;
+}
+
+.collection ul li:hover::after {
+  opacity: 1;
 }
 
 .collection img {
   position: relative;
   width: 10em;
+  border-radius: 2em;
 }
-
-/*HOW DO I GET THE TEXT IN THE MIDDLE*/
 
 .collection a {
   color: var(--main-color);
-  position: absolute;
-  /* margin-left: -10em; */
+  position: absolute; /*zorgt voor 'grid-view' van de collectie*/
   left: 50%;
   top: 50%;
   transform: translate(-50%,-50%);
   z-index: 10;
 }
 
+/*hover animation*/
+.collection a:hover {
+  background-color: transparent;
+  font-size: 1.2em
+}
+
+
+
 
 /*NEWSLETTER*/
+
 .newsletter {
-  color: var(--main-color);
-  background-color: rgb(255, 191, 166);
+  background-color: rgb(185, 97, 62);
   padding: 2em;
 }
 
@@ -254,13 +342,47 @@ input[type=email] {
   border: none;
   border-bottom: 1px solid var(--main-color);
   margin-bottom: 3em;
-
+  caret-color: var(--main-color); /*voor typing indicator*/
 }
 
 /*selecteren placeholder text om kleur te geven*/
 ::placeholder {
   color: var(--main-color);
 }
+
+.submitted {
+  font-family: var(--main-font), var(--font-fallback), var(--font-fallback2);
+  font-size: 2em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.submitted a {
+  text-decoration: none;
+  font-weight: var(--font-weight);
+  font-size: .5em;
+
+  background-color: var(--main-color); /*same as the bgcolor*/
+  color: var(--background-color);
+
+  padding: 0.75em;
+  padding-left: 1.75em;
+  padding-right: 1.75em;
+  border-radius: 2em;
+  margin-top: 2em;
+
+  transition: .5s ease-in-out;
+}
+
+.submitted a:hover {
+  background-color: rgb(70, 5, 8);
+}
+
+
+
+/*PROCESS SECTION*/
 
 .process {
   color: var(--main-color);
@@ -295,8 +417,8 @@ input[type=email] {
   text-decoration: none;
   font-weight: var(--font-weight);
 
-  background-color: var(--tertiary-bg-color); /*same as the bgcolor*/
-  color: white;
+  background-color: var(--main-color); /*same as the bgcolor*/
+  color: var(--background-color);
 
   padding: 0.75em;
   padding-left: 1.75em;
@@ -307,17 +429,18 @@ input[type=email] {
 }
 
 
+
+
 /*QUOTE MARZIA*/
 .quote {
   background-color: var(--secondary-bg-color);
-  color: var(--main-color);
   
   padding-top: 3em;
   padding-bottom: 3em;
 }
 
 .quote img {
-  width: 20em;
+  width: 70%;
 }
 
 .quote blockquote {
@@ -346,6 +469,10 @@ input[type=email] {
 }
 
 
+
+
+
+
 /*RANDOM GREEN BOI PIC*/
 .greenboi {
   margin: 0;
@@ -357,64 +484,135 @@ input[type=email] {
 
 
 
+
+
+
 /*FEATURED IMG*/
-.featured  {
-  color: var(--main-color);
+
+figure {
+  width: 20em;
+  border: 1px solid var(--main-color);
+  padding: 0.1em 0.1em 2em 0.1em;
+  margin: 1em;
+  background-color:var(--main-color);
 }
 
+figure img {
+  width: 18em;
+}
 
-.featured p {
-  margin-bottom: 2em;
+figcaption {
+  text-align: left;
+  color: black;
+}
+
+span {
+  font-weight: bold;
 }
 
 
 .featured article {
   display: flex;
-  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
   flex-wrap: nowrap;
-  align-items: center; /*makes images not stretch*/
-  gap: 2em;
-  margin-left: 2em;
-  margin-right: 2em;
-  margin-bottom: 2em;
   overflow: scroll;
-}
+  overflow-y: hidden;
+  margin: 2em;
 
-.featured img {
-  width: 15em;
-  border: 0.2em solid white;
-  border-bottom: 5em solid white;
-}
-
-.featured .clouds {
-  border: none;
-  width: 10%;
+  gap: 2em;
 }
 
 
-
-
-/*FOOTER*/
-
-footer {
-  color: var(--main-color);
-
+.featuredheading {
   display: flex;
   justify-content: center;
-  flex-flow: row wrap;
-  gap: 2em;
-  margin-bottom: 5em;
+  gap: 1em;
+  margin-top: 5em;
+  margin-bottom: 1em;
 }
 
-footer a {
-  text-decoration: none;
-  font-weight: var(--font-weight);
-  font-size: 0.75em;
+.featuredheading img {
+  width: 2em;
+}
+
+
+
+
+
+/*SHOPPING PAGE - MADE BY MARZIA*/
+#shoppingpage .landing {
+  margin-bottom: 10em;
+}
+
+.landing header > h2 {
+  margin-top: 5em;
+  font-weight: 400;
+}
+
+/* filter for shopping page */
+#shoppingpage form {
+  position: absolute;
+  top: 16em;
+}
+
+/* filter */
+#sortby {
+  font-size: 1.2em;
+  background-color: transparent;
   color: var(--main-color);
+  border-bottom: 1em white;
+  cursor: pointer;
+}
+
+#sortby option {
+  color: black;
+}
+
+.shop {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5em;
+  
+}
+
+.shop article {
+  max-width: 30em;
+}
+
+.shop article a {
+  background: none;
+  transition: none;
+  border: none;
+  border-radius: none;
+  padding: none;
+}
+
+.shop h3 {
+  margin-top: 1em;
+}
+
+.shop p {
+  margin-top: .5em;
 }
 
 
-/*STYLES FOR STATES*/
+
+
+
+/*STYLES FOR STATES & ANIMATIONS*/
+
+/*fade in animations*/
+section {
+  opacity: 0;
+  transition: opacity 500ms ease-in;
+}
+
+section.appear {
+  opacity: 1;
+}
+
 article > a:active {
   background-color: var(--active-color);
   color: var(--main-color);
@@ -424,6 +622,43 @@ a:focus {
   border: solid olive;
 }
 
+a:hover {
+  background-color: rgb(70, 5, 8);
+  color: var(--main-color);
+}
+
 input:focus {
   opacity: 50%;
 }
+
+button:hover {
+  background-color: rgb(221, 147, 49);
+  color: var(--main-color);
+  transition: 0.5s ease-in-out;
+}
+
+button:focus {
+  background-color: rgb(221, 147, 49);
+  color: var(--main-color);
+}
+
+
+/*scrollbar styling*/
+
+::-webkit-scrollbar {
+  width: 0.5em;
+  height: 0.5em;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgb(216, 182, 193);
+  border-collapse: separate;
+  overflow: hidden;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(70, 5, 8);
+
+}
+
+

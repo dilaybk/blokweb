@@ -5,71 +5,181 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="author" content="Dilay Bayraktaroglu">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>maí shop</title>
+    <title>maì shop</title>
 
-    <link href="/styles/style.css" rel="stylesheet">
+    <link href="../styles/style.css" rel="stylesheet">
     <link rel="icon" type="image/svg+xml" href="images/favicon.svg"> <!--CHANGE-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;500;700;800&family=Sacramento&display=swap" rel="stylesheet">
 </head>
 
-
-<body>
+<!-- ID toegevoegd aan body voor betere styling -->
+<body id="shoppingpage">
 
     <section class="landing">
 
+        <!--Header met announcement, logo als img en h2-->
         <header>
-
             <h1> ★ PICKLE IS BACK! ORDER YOUR LONG BOI NOW ★ </h1>
-            <img src="/images/whitelogo.png" alt="logo maí">
+            <img src="../images/whitelogo.png" alt="logo maí">
             <h2>Made by Marzia</h2>
-
-            <!--HIER MOET EEN FILTER KOMEN-->
-
-            <nav>
-
-				<button>Menu</button>
-
-				<!--Unordered list met list items voor verschillende links naar andere pagina's-->
-				<ul>
-
-					<li><a>Home</a></li>
-
-					<li><a>Shop</a></li>
-
-					<li><a>Creations</a></li>
-
-					<li><a>Contact</a></li>
-
-					<li><a>Login</a></li>
-
-					<li><a>Close</a></li>			
-
-				</ul>
-
-			</nav>
-
         </header>
+
+
+        <!--filter-->
+        <form>
+            <select name="sortBy" id="sortby">
+                <option value="Featured">Featured</option>
+                <option value="BestSelling">Best Selling</option>
+                <option value="Alphabetically1">Alphabetically, A-Z</option>
+                <option value="Alphabetically2">Alphabetically, Z-A</option>
+                <option value="PriceLow">Price, low to high</option>
+                <option value="PriceHigh">Price, high to low</option>
+                <option value="DateOld">Date, old to new</option>
+                <option value="DateNew">Date, new to old</option>
+            </select>
+        </form>
+
+        <!--Menu-->
+        <nav>
+
+			<!--Unordered list met list items voor verschillende links naar andere pagina's-->
+			<ul>
+
+                <li><a href="../index.html">Home</a></li>
+
+                <li><a href="/pages/shop.html">Shop</a></li>
+
+                <li><a href="">Creations</a></li>
+
+                <li><a href="">Contact</a></li>
+
+                <li><a href="">Login</a></li>		
+        
+			</ul>
+
+            <button>Menu</button>
+
+		</nav>
 
     </section>
 
 
+    <main>
     
-    <article>
-        <img src="/images/shoppic1.jpeg" alt="Ceramic ghost with pumpkin hat picture">
-        <p>Made by Marzia Ceramic Ghost with Pumpkin Hat</p>
-        <p>from $80.00</p>
+        <!--Shop section met multiple articles en daarin img links met producten-->
+        <section class="shop">
+            
+            <article>
 
-        <img src="/images/shoppic2.jpeg" alt="Ceramic Ghost with Witch Hat">
-        <p>Made by Marzia Ceramic Ghost with Witch Hat</p>
-        <p>$90.00</p>
+                <a><img src="../images/shoppic1.jpeg" alt="Ceramic ghost with pumpkin hat picture"></a>
+                <h3>Made by Marzia Ceramic Ghost with Pumpkin Hat</h3>
+                <p>from $80.00</p>
 
-        <!--NOG NIET AF-->
-    </article>
-
+            </article>
 
 
+            <article>
+
+                <a><img src="../images/shoppic2.jpeg" alt="Ceramic Ghost with Witch Hat"></a>
+                <h3>Made by Marzia Ceramic Ghost with Witch Hat</h3>
+                <p>$90.00</p>
+
+            </article>
+
+
+            <article>
+
+                <a><img src="../images/shoppic3.jpeg" alt="Ceramic cup with colorful polkadots and a face"></a>
+                <h3>Made by Marzia Tazza</h3>
+                <p>$80.00</p>
+            </article>
+
+
+            <article>
+
+                <a><img src="../images/shoppic5.jpeg" alt="White teapot with black speckles and a red mushroom lid"></a>
+                <h3>Made by Marzia Fungo Teapot Speckled Interior</h3>
+                <p>$125.00</p>
+
+            </article>
+
+
+            <article>
+
+                <a><img src="../images/shoppic6.jpeg" alt="Triangular shaped creamy colored vase with pink flowers and blue clouds and a face"></a>
+                <h3>Made by Marzia Yama-san Floral</h3>
+                <p>$95.00</p>
+            </article>
+
+
+            <article>
+
+                <a><img src="../images/shoppic7.jpeg" alt="Triangular shaped creamy colored vase with colored polka dots and a face"></a>
+                <h3>Made by Marzia Yama-san Pastel Spotted</h3>
+                <p>$95.00</p>
+
+            </article>
+
+
+            <article>
+
+                <a><img src="../images/shoppic8.jpeg" alt="Triangular shaped creamy colored vase with black, orange, blue dots and a face"></a>
+                <h3>Made by Marzia Yama-san Black Spots</h3>
+                <p>$95.00</p>
+
+            </article>
+
+
+            <article>
+
+                <a><img src="../images/shoppic9.jpeg" alt="Triangular shaped creamy colored vase with yellow and orange dots and a face"></a>
+                <h3>Made by Marzia Yama-san Yellow Spots</h3>
+                <p>from $75.00</p>
+
+            </article>
+            
+
+            <article>
+
+                <a><img src="../images/shoppic91.jpeg" alt="Plate with face and cow print"></a>
+                <h3>Made by Marzia Rotto Dishes</h3>
+                <p>$55.00</p>
+
+            </article>
+
+
+            <article>
+
+                <a><img src="../images/shoppic92.jpeg" alt="Coasters in the shape of daisies with a smiley face"></a>
+                <h3>Made by Marzia Fiore Coasters</h3>
+                <p>$55.00</p>
+
+            </article>
+
+
+            <article>
+
+                <a><img src="../images/shoppic93.jpeg" alt="White teapots with black speckles and a red mushroom lid"></a>
+                <h3>Made by Marzia Fungo Teapot Pink Interior</h3>
+                <p>$125.00</p>
+
+            </article>
+
+
+            <article>
+
+                <a><img src="../images/shoppic94.jpeg" alt="Triangular blue vase with a face and colored speckles"></a>
+                <h3>Made by Marzia Yama-san Misfit</h3>
+                <p>$75.00</p>
+
+            </article>
+
+        </section>
+
+
+    </main>
 
     <footer>
 
@@ -92,6 +202,8 @@
 
     </footer>
 
+    <!--Javascript Link-->
+    <script src="../scripts/script.js"></script>
     
 </body>
 </html>

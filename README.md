@@ -22,7 +22,7 @@ Dilay Bayraktaroglu
 Blauw
 
 #### Je focus:
-Surface
+Surface (+ zo responsive mogelijk)
  
 </details>
 
@@ -240,6 +240,10 @@ hier na afloop snel de uitkomsten van de meeting vastleggen
 ### Stand van zaken
 hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
 
+Ik ben op het einde geswitched naar responsive, omdat ik tijd tekort kreeg. Mijn website was al voor het grootste gedeelte responsive, dus dat maakte het wat makkelijker om het volledig responsive te maken.
+
+Ben weer geswitched naar surface, omdat ik vastliep. 
+
 ### Screenshot(s)
 
 hier screenshot(s) van je eindresultaat
@@ -257,8 +261,10 @@ hier screenshot(s) van je eindresultaat
 
 Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
 
-1. bron 1
-2. bron 2
-3. ...
+1. https://www.youtube.com/watch?v=T8EYosX4NOo&t=0s&ab_channel=KevinPowell
+2. https://www.youtube.com/watch?v=T8EYosX4NOo&ab_channel=KevinPowell
+3. https://medium.com/frontendshortcut/how-to-make-a-polaroid-photo-gallery-in-html-and-css-d68f5a306c84
+4. https://www.w3.org/Style/Examples/007/center.en.html
+5. https://stackoverflow.com/questions/18322548/black-transparent-overlay-on-image-hover-with-only-css
 
 </details>
