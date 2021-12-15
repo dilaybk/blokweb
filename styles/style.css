@@ -213,7 +213,7 @@ footer a {
 /*Section voor background, waarin header, article, nav & aside in staat*/
 
 #index .landing {
-  background-image: url("/images/flowers.jpg");
+  background-image: url("../images/flowers.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh; 
