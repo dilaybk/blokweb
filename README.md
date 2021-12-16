@@ -85,10 +85,16 @@ images 'ease-in'
 <summary>uitwerken voor 1e voortgang</summary>
 
 ### Stand van zaken
-hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+
+Ik krijg de collection maar niet als een soort van grid met de tekst op de afbeeldingen
 <img src="images/lastig1.jpg">
 <img src="images/lastigimg1.jpg">
+
+Form nav van de humpty opdracht?
+
 <img src="images/form-nav.jpg">
+
+vraag: fonts in * 
 <img src="images/vraag.jpg">
 
 ### Agenda voor meeting
@@ -122,7 +128,6 @@ hier na afloop snel de uitkomsten van de meeting vastleggen
 <summary>uitwerken voor 2e voortgang</summary>
 
 ### Stand van zaken
-hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
 
 De basis van de website is goed. Ben bijna klaar met mijn eerste html pagina. Ik ben nog niet toegekomen aan de tweede html pagina, maar die is makkelijker dan deze dus misschien heb ik dan minder stress.
 
@@ -165,34 +170,12 @@ Lijst met je bevindingen die in de test naar voren kwamen:
 - wit op geel werkt niet
 - let op kleur bij tekst. Er moet bij collection een zwarte overlay misschien op de fotos
 - op de website veel lichte kleuren dus moet meer contrast erin
-- grootte gaat goed wanneer je het groot
+- grootte gaat goed wanneer je het groter maakt
 - je moet veel lezen dus wanneer je concentratie problemen hebt ga je niet de hele pagina lezen
 - tekst op collection misschien iets groter om meteen te kunnen zien waar je heen moet
 - shop now is wel handig 
 - op shoppagina meteen wel duidelijk wat er moet gebeuren en je kunt meteen zien wat het product is
 
-#### Titel eerste bevinding
-Hier korte omschrijving (met indien nodig een afbeelding)
-
-Hier een omschrijving van hoe het opgelost kan worden (met indien nodig een afbeelding)
-
-
-#### Titel tweede bevinding. 
-Hier korte omschrijving (met indien nodig een afbeelding)
-
-Hier een omschrijving van hoe het opgelost kan worden (met indien nodig een afbeelding)
-
-
-#### Titel volgende bevinding. 
-Hier korte omschrijving (met indien nodig een afbeelding)
-
-Hier een omschrijving van hoe het opgelost kan worden (met indien nodig een afbeelding)
-
-
-#### Titel nog een bevinding. 
-Hier korte omschrijving (met indien nodig een afbeelding)
-
-Hier een omschrijving van hoe het opgelost kan worden (met indien nodig een afbeelding)
 
 </details>
 
@@ -206,7 +189,7 @@ Hier een omschrijving van hoe het opgelost kan worden (met indien nodig een afbe
 <summary>uitwerken voor 3e voortgang</summary>
 
 ### Stand van zaken
-hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+Ik ben begonnnen met het aanpassen van mijn website na de vorige les om het meer toegankelijk te maken. Ik gebruik de bevindingen als een checklist.
 
 
 ### Agenda voor meeting
@@ -240,13 +223,24 @@ hier na afloop snel de uitkomsten van de meeting vastleggen
 ### Stand van zaken
 hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
 
-Ik ben op het einde geswitched naar responsive, omdat ik tijd tekort kreeg. Mijn website was al voor het grootste gedeelte responsive, dus dat maakte het wat makkelijker om het volledig responsive te maken.
-
-Ben weer geswitched naar surface, omdat ik vastliep. 
+Ik heb ondertussen geprobeerd om alles responsive te maken maar het lukte niet echt, dus heb me maar gehouden aan de surface design. Javascript vind ik nog steeds een beetje lastig.
+Ik vond eigenlijk alles wel lastig, maar denk dat ik het uiteindeljk wel goed heb gedaan.
+Toen ik het op github had gezet, waren een aantal afbeeldingen niet meer te zien. Ik had blijkbaar de mappen niet goed ingedeeld, maar dat is ook gefixt. 
+Dark mode heb ik ook toegevoegd.
 
 ### Screenshot(s)
 
-hier screenshot(s) van je eindresultaat
+<img src="/images/eindresultaat00.jpg">
+<img src="/images/eindresultaat01.jpg">
+<img src="/images/eindresultaat02.jpg">
+<img src="/images/eindresultaat03.jpg">
+<img src="/images/eindresultaat04.jpg">
+<img src="/images/eindresultaat05.jpg">
+<img src="/images/eindresultaat06.jpg">
+<img src="/images/eindresultaat07.jpg">
+<img src="/images/eindresultaat08.jpg">
+<img src="/images/eindresultaat09.jpg">
+
 
 </details>
 
@@ -266,5 +260,6 @@ Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
 3. https://medium.com/frontendshortcut/how-to-make-a-polaroid-photo-gallery-in-html-and-css-d68f5a306c84
 4. https://www.w3.org/Style/Examples/007/center.en.html
 5. https://stackoverflow.com/questions/18322548/black-transparent-overlay-on-image-hover-with-only-css
+6. https://www.youtube.com/watch?v=wodWDIdV9BY&ab_channel=KevinPowell
 
 </details>

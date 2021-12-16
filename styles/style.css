@@ -13,14 +13,32 @@
   --background-color: #888bda;
   --secondary-bg-color: rgb(209, 124, 139);
   --tertiary-bg-color: #F5D47F;
+  --quarternary-bg-color: rgb(185, 97, 62);
+  --announcement-color: #718d01;
+  --menu-color: rgb(221, 147, 49);
   --main-color: white;
   --active-color: rgb(112, 6, 55);
+  --text-color2: #6d222f;
+
   --main-font: Karla;
   --font-fallback: Helvetica;
   --font-fallback2: Arial;
   --font-fallback3: sans-serif;
   --font-weight: 300;
 }
+
+.darkmode {
+  --background-color: #48445e;
+  --secondary-bg-color: rgb(80, 26, 26);
+  --tertiary-bg-color: #293238;
+  --quarternary-bg-color: rgb(134, 60, 60);
+  --announcement-color: #425009;
+  --menu-color: rgb(177, 122, 51);
+  --main-color: #d8d8d8;
+  --active-color: #a0385c; 
+  --text-color2: #e6b892;
+  }
+
 
 /*GENERAL STYLES*/
 
@@ -31,11 +49,9 @@ body {
   color: var(--main-color);
 }
 
-
 img {
   width: 100%;
 }
-
 
 h1 {
   font-weight: var(--font-weight);
@@ -54,6 +70,17 @@ a {
   transition: all 0.5s ease-in-out;
 }
 
+/*States of links*/
+a:focus {
+  border: 0.2em solid olive;
+  background-color: rgb(70, 5, 8);
+  color: var(--main-color);
+}
+
+a:hover {
+  background-color: rgb(70, 5, 8);
+  color: var(--main-color);
+}
 
 /* Wat er in de header staat is voor die gehele header, h1 & img zijn specifiek omdat die styling daarin moet passen */
 /* Header with announcement & logo */
@@ -67,7 +94,7 @@ header {
 
 /*announcement*/
 header h1 {
-  background-color: #718d01;
+  background-color: var(--announcement-color);
 
   position: absolute;
   top: 0;
@@ -107,7 +134,15 @@ article a {
   border-radius: 2em;
 }
 
-/*Navigation*/
+/*article links state*/
+article > a:active {
+  background-color: var(--active-color);
+  color: var(--main-color);
+}
+
+
+/*NAVIGATION*/
+
 nav {
   position: fixed;
   bottom: 3em;
@@ -115,7 +150,7 @@ nav {
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-color: rgb(221, 147, 49); 
+  background-color: var(--menu-color); 
   overflow: hidden; /*voor ronde border wanneer open*/
 }
 
@@ -154,6 +189,29 @@ li > a {
   color: var(--main-color);
 }
 
+/*States Buttons*/
+button:hover {
+  background-color: var(--menu-color);
+  color: var(--main-color);
+  transition: 0.5s ease-in-out;
+}
+
+button:focus {
+  background-color: var(--menu-color);
+  color: var(--main-color);
+}
+
+
+/*fade in animations (voor js)*/
+section {
+  opacity: 0;
+  transition: opacity 500ms ease-in;
+}
+
+section.appear {
+  opacity: 1;
+}
+
 
 /* Aside voor scroll ding */
 aside {
@@ -167,7 +225,7 @@ aside {
   left: 0;
   padding: 0.3em;
   background-color: var(--tertiary-bg-color);
-  color: #6d222f;
+  color: var(--text-color2);
 }
 
 aside p {
@@ -178,6 +236,7 @@ aside p {
   animation-iteration-count: infinite;
 }
 
+/*keyframes for scroll slider*/
 @keyframes slider {
   0% {
     transform: translateX(100%);
@@ -187,17 +246,28 @@ aside p {
   }
 }
 
-/*FOOTER*/
+
+/* FOOTER */
 
 footer {
   color: var(--main-color);
 
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-flow: row wrap;
   gap: 2em;
-  margin-top: 10em;
-  margin-bottom: 20em;
+  margin: 10em 5em 10em 5em;
+}
+
+footer img {
+  width: 4em;
+}
+
+footer section {
+  display: flex;
+  gap: 2em;
+  flex-flow: row-wrap;
 }
 
 footer a {
@@ -205,7 +275,15 @@ footer a {
   font-weight: var(--font-weight);
   font-size: 0.75em;
   color: var(--main-color);
+  background-color: transparent;
 }
+
+footer a:hover {
+  color: var(--text-color2);
+  background: transparent;
+  border-bottom: .1em solid var(--text-color2);
+}
+
 
 
 /*CLASSES*/
@@ -230,11 +308,24 @@ footer a {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-
-  opacity: 0;
-  transition: opacity 250ms ease-in;
 }
 
+/*DARK MODE BUTTON*/
+
+.landing button > img {
+  width: 3.5em;
+  position: fixed;
+  top: 3.5em;
+  right: 2em;
+  z-index: 99;
+  background-color: var(--quarternary-bg-color);
+  padding: 0.4em;
+  border-radius: 20%;
+  border: 0.2em solid var(--main-color);
+  cursor: pointer;
+}
+
+/* 'Handmade creations with character' with a link on index.html */
 .landing article {
   display: flex;
   flex-direction: column;
@@ -280,7 +371,7 @@ footer a {
   position: relative;
 }
 
-
+/*for animations in collection*/
 .collection ul li::after {
   content: '';
   position: absolute;
@@ -290,7 +381,7 @@ footer a {
   left: 0;
   border-radius: 2em;
   background: rgba(0, 0, 0, 0.6);
-  opacity: 0;
+  opacity: 0.4; /*zodat de overlay er al een beetje is*/
   transition: all 1s;
 }
 
@@ -315,8 +406,17 @@ footer a {
 
 /*hover animation*/
 .collection a:hover {
-  background-color: transparent;
-  font-size: 1.2em
+  background-color: transparent; /*to not get the purple hover styling*/
+  font-size: 1.2em;
+  border: none;
+  border-bottom: 0.2em solid var(--main-color);
+}
+
+.collection a:focus {
+  border: none;
+  font-size: 1.2em;
+  background: transparent ;
+  border-bottom: 0.2em solid var(--main-color);
 }
 
 
@@ -324,19 +424,23 @@ footer a {
 
 /*NEWSLETTER*/
 
+/*section*/
 .newsletter {
-  background-color: rgb(185, 97, 62);
+  background-color: var(--quarternary-bg-color);
   padding: 2em;
 }
 
+/*Sign up!*/
 .newsletter h2 {
   padding: 2em 2em 0.5em 2em;
 }
 
+/*We'll keep you up to date*/
 .newsletter p {
   margin-bottom: 1em;
 }
 
+/*form*/
 input[type=email] {
   background: transparent;
   border: none;
@@ -345,11 +449,20 @@ input[type=email] {
   caret-color: var(--main-color); /*voor typing indicator*/
 }
 
+/*form state*/
+input:focus {
+  opacity: 50%;
+}
+
 /*selecteren placeholder text om kleur te geven*/
 ::placeholder {
   color: var(--main-color);
 }
 
+
+/*SUBMITTED.HTML*/
+
+/*section*/
 .submitted {
   font-family: var(--main-font), var(--font-fallback), var(--font-fallback2);
   font-size: 2em;
@@ -359,6 +472,7 @@ input[type=email] {
   transform: translate(-50%, -50%);
 }
 
+/*home button link*/
 .submitted a {
   text-decoration: none;
   font-weight: var(--font-weight);
@@ -376,14 +490,15 @@ input[type=email] {
   transition: .5s ease-in-out;
 }
 
+/*states*/
 .submitted a:hover {
   background-color: rgb(70, 5, 8);
 }
 
 
-
 /*PROCESS SECTION*/
 
+/*section*/
 .process {
   color: var(--main-color);
   margin: 4em;
@@ -391,6 +506,7 @@ input[type=email] {
   position: relative;
 }
 
+/*position images over each other*/
 .process img:first-of-type {
   position: absolute;
   width: 60%;
@@ -404,15 +520,18 @@ input[type=email] {
   width: 60%;
 }
 
+/*From the first idea to a small-batch*/
 .process h2 {
   margin-top: 0.5em;
   margin-bottom: 0.5em;
 }
 
+/*Our entire process...thoughtful craft.*/
 .process p {
   margin-bottom: 2em;
 }
 
+/*link to 'Our Process' page*/
 .process a {
   text-decoration: none;
   font-weight: var(--font-weight);
@@ -428,10 +547,23 @@ input[type=email] {
 
 }
 
+/*states a*/
+.process a:focus {
+  border: 0.2em solid olive;
+  background-color: rgb(70, 5, 8);
+  color: var(--main-color);
+}
+
+.process a:hover {
+  background-color: rgb(70, 5, 8);
+  color: var(--main-color);
+}
 
 
 
 /*QUOTE MARZIA*/
+
+/*section*/
 .quote {
   background-color: var(--secondary-bg-color);
   
@@ -439,10 +571,12 @@ input[type=email] {
   padding-bottom: 3em;
 }
 
+/*image of Marzia*/
 .quote img {
   width: 70%;
 }
 
+/*Marzia's quote*/
 .quote blockquote {
   font-size: 2em;
   font-weight: var(--font-weight);
@@ -452,10 +586,12 @@ input[type=email] {
   margin-right: 2em;
 }
 
+/* 'Founder - Marzia Kjellberg' */
 .quote p {
   margin-bottom: 2em;
 }
 
+/*Link to 'About the Brand'*/
 .quote a {
   text-decoration: none;
   background-color: var(--main-color);
@@ -468,12 +604,20 @@ input[type=email] {
   margin-top: 20em;
 }
 
+.quote a:focus {
+  border: 0.2em solid olive;
+  background-color: rgb(70, 5, 8);
+  color: var(--main-color);
+}
 
-
-
+.quote a:hover {
+  background-color: var(--quarternary-bg-color);
+  color: var(--main-color);
+}
 
 
 /*RANDOM GREEN BOI PIC*/
+
 .greenboi {
   margin: 0;
 }
@@ -484,33 +628,9 @@ input[type=email] {
 
 
 
+/*FEATURED IMG OF PEOPLE REVIEWING*/
 
-
-
-/*FEATURED IMG*/
-
-figure {
-  width: 20em;
-  border: 1px solid var(--main-color);
-  padding: 0.1em 0.1em 2em 0.1em;
-  margin: 1em;
-  background-color:var(--main-color);
-}
-
-figure img {
-  width: 18em;
-}
-
-figcaption {
-  text-align: left;
-  color: black;
-}
-
-span {
-  font-weight: bold;
-}
-
-
+/*section met article: waar alle figures in staan*/
 .featured article {
   display: flex;
   justify-content: flex-start;
@@ -523,7 +643,7 @@ span {
   gap: 2em;
 }
 
-
+/*Welcome home + p*/
 .featuredheading {
   display: flex;
   justify-content: center;
@@ -532,19 +652,46 @@ span {
   margin-bottom: 1em;
 }
 
+/*cloud images*/
 .featuredheading img {
   width: 2em;
 }
 
+/*figures voor elke foto met polaroid pictures*/
+figure {
+  width: 20em;
+  border: 1px solid var(--main-color);
+  padding: 0.1em 0.1em 2em 0.1em;
+  margin: 1em;
+  background-color:var(--main-color);
+}
 
+/*images*/
+figure img {
+  width: 18em;
+}
+
+/*captions*/
+figcaption {
+  text-align: left;
+  color: black;
+}
+
+/*first word styling*/
+span {
+  font-weight: bold;
+}
 
 
 
 /*SHOPPING PAGE - MADE BY MARZIA*/
+
+/*Section met header, form & nav*/
 #shoppingpage .landing {
   margin-bottom: 10em;
 }
 
+/*'Made by Marzia'*/
 .landing header > h2 {
   margin-top: 5em;
   font-weight: 400;
@@ -554,6 +701,8 @@ span {
 #shoppingpage form {
   position: absolute;
   top: 16em;
+  border-bottom: .15em solid var(--main-color);
+  padding-bottom: .5em;
 }
 
 /* filter */
@@ -561,14 +710,15 @@ span {
   font-size: 1.2em;
   background-color: transparent;
   color: var(--main-color);
-  border-bottom: 1em white;
   cursor: pointer;
 }
 
+/*color of text for options*/
 #sortby option {
   color: black;
 }
 
+/*section in main with articles*/
 .shop {
   display: flex;
   justify-content: center;
@@ -577,73 +727,75 @@ span {
   
 }
 
+/*products*/
 .shop article {
   max-width: 30em;
 }
 
+/*links to products*/
 .shop article a {
   background: none;
   transition: none;
   border: none;
   border-radius: none;
-  padding: none;
+  padding: 0;
 }
 
+.shop article a > img {
+  transition: 0.5s ease-in-out;
+}
+
+.shop article a > img:hover {
+  border: 0.5em solid white;
+}
+
+/*Titles of products*/
 .shop h3 {
   margin-top: 1em;
 }
 
+/*Price*/
 .shop p {
   margin-top: .5em;
 }
 
 
 
+/*LOADER*/
 
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed; /*on top of everything else and always in the middle*/
+  z-index: 98;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--background-color);
 
-/*STYLES FOR STATES & ANIMATIONS*/
-
-/*fade in animations*/
-section {
-  opacity: 0;
-  transition: opacity 500ms ease-in;
+  animation: fadeOut 5s linear;
+  pointer-events: none; /*makes it clickable*/
 }
 
-section.appear {
-  opacity: 1;
+.loader.hidden {
+  animation: fadeOut 5s;
 }
 
-article > a:active {
-  background-color: var(--active-color);
-  color: var(--main-color);
+@keyframes fadeOut {
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
 }
 
-a:focus {
-  border: solid olive;
-}
-
-a:hover {
-  background-color: rgb(70, 5, 8);
-  color: var(--main-color);
-}
-
-input:focus {
-  opacity: 50%;
-}
-
-button:hover {
-  background-color: rgb(221, 147, 49);
-  color: var(--main-color);
-  transition: 0.5s ease-in-out;
-}
-
-button:focus {
-  background-color: rgb(221, 147, 49);
-  color: var(--main-color);
+.loader img {
+  width: 20em;
 }
 
 
-/*scrollbar styling*/
+/*SCROLLBAR*/
 
 ::-webkit-scrollbar {
   width: 0.5em;
