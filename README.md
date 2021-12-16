@@ -22,7 +22,7 @@ Dilay Bayraktaroglu
 Blauw
 
 #### Je focus:
-Surface (+ zo responsive mogelijk)
+Surface
  
 </details>
 
